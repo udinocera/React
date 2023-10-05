@@ -7,10 +7,14 @@ function App(){
     <>
     <div>
     <Hello/>
+    <Hello/>
+    <Hello/>
+    <Hello/>
     <Message/>
     </div>
-    
+  
     </>
+    //COMPARE IL MESSAGGIO PIU' VOLTE
   )
 }
 
