@@ -1,20 +1,21 @@
 import { Hello } from "./Hello";
-import { Message } from "./Message";
+
 
 function App(){
+
+  function Message(){
+    return <p>What a beautiful day!</p>
+  }
 
   return(
     <>
     <div>
     <Hello/>
-    <Hello/>
-    <Hello/>
-    <Hello/>
     <Message/>
     </div>
   
     </>
-    //COMPARE IL MESSAGGIO PIU' VOLTE
+    //Funziona lo stesso
   )
 }
 
