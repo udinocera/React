@@ -1,4 +1,5 @@
 import { Hello } from "./Hello";
+import { Message } from "./Message";
 
 function App(){
 
@@ -6,6 +7,7 @@ function App(){
     <>
     <div>
     <Hello/>
+    <Message/>
     </div>
     
     </>
