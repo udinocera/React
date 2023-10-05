@@ -7,8 +7,10 @@ function App() {
 
   return (
     <>
-    {sayHello("Umberto")}
+    {sayHello()}
     </>
+
+    //Non passando alcun parametro alla funziona, in pagina uscirà soltanto Hello !
   )
 }
 
