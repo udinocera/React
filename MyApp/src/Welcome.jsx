@@ -1,9 +1,12 @@
-// eslint-disable-next-line react/prop-types
-export function Welcome ({ name, age }) {
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
+import { Age } from "./Age"
+export function Welcome ({name, age}) {
     return ( 
     <div>
     <p>Welcome, {name}!</p>
-    <p>Your age is {age}</p>
+    <Age age={21}/>
     </div>
-    )
+    );
 }
