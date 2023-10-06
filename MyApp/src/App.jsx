@@ -1,14 +1,9 @@
-import { AlertClock } from "./AlertClock";
+import { Counter } from "./Counter";
 
 function App() {
-
-  function handleButtonClick(){
-    alert("Sono le " + new Date().toLocaleTimeString())
-  }
-  
   return (
     <>
-      <AlertClock event={handleButtonClick}/>
+      <Counter />
     </>
 
   );
