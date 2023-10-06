@@ -1,22 +1,14 @@
-import { Hello } from "./Hello";
+import { Welcome } from "./Welcome";
 
-
-function App(){
-
-  function Message(){
-    return <p>What a beautiful day!</p>
-  }
-
-  return(
-    <>
-    <div>
-    <Hello/>
-    <Message/>
-    </div>
+function App() {
   
+  return (
+    <>
+      <Welcome name="Umberto" />
+      <Welcome name="Luca" />
+      <Welcome name="Giovanni" />
     </>
-    //Funziona lo stesso
-  )
+  );
 }
 
-export default App
+export default App;
