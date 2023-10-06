@@ -1,3 +1,4 @@
+import { AlertClock } from "./AlertClock";
 import { Welcome } from "./Welcome";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <Welcome name="John" age={2}/>
+      <AlertClock />
     </>
 
   );
