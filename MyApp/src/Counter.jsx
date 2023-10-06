@@ -1,17 +1,28 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
-import { CounterDisplay } from "./CounterDisplay"
+import { Button } from "./Button"
 
-export function Counter(){
-    const [count, setCount] = useState(0)
-    function handleClick(){
-        setCount(count + 1)
+export function Counter({inizio, incremento}){
+    const [count, setCount] = useState(inizio)
+    
+    function handleAggiungiUno (){
+        setCount(count + incremento)
+    }
+
+    function handleRimuoviUno(){
+        setCount(count - incremento)
+    }
+
+    function handleReset(){
+        setCount(0)
     }
 
     return(
         <div>
-            <CounterDisplay value={count} />
-            <button onClick={handleClick}>Clicca qui</button>
+           <h2>{count}</h2> 
+           <Button name="Aggiungi" event={handleAggiungiUno} />
+           <Button name="Rimuovi" event={handleRimuoviUno} />
+           <Button name="Reset" event={handleReset} />
         </div>
     )
 }
