@@ -4,8 +4,8 @@
 export function Welcome ({name, age}) {
     return ( 
     <div>
-    {name==="John" &&<p>Welcome, {name}!</p>}
-    {age>=18 && age<= 65 &&<p>You are {age} years old</p>}
+    <p>Welcome, {name}!</p>
+    {age>=18 ? <p>Your age is {age}</p> : <p>You are very young!</p>}
     </div>
     );
 }
