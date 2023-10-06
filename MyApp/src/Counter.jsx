@@ -1,13 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 
-export function Counter(){
-    const [count, setCount] = useState(0)
+export function Counter( {inizio, incremento}){
+    const [count, setCount] = useState(inizio)
     function handleClick(){
-        setCount(count + 1)
+        setCount(count + incremento)
     }
-
-    //FUNZIONE Dentro setCount se dobbiamo fare + Operazioni
-    //Altrimenti se dobbiamo fare una sola operazione utilizziamo un valore immediato
 
     return(
         <div>
