@@ -4,10 +4,13 @@ function App() {
   
   return (
     <>
-      <Welcome name="Umberto" />
-      <Welcome name="Luca" />
-      <Welcome name="Giovanni" />
+      <Welcome name="" />
+      
+      <Welcome /> 
+      
     </>
+    // Se tolgo la prop name comparirà solo Welcome
+    // Se non metto name="Umberto, uscirà quello che ho passato alla prop"
   );
 }
 
