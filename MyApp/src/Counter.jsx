@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react"
 import { Button } from "./Button"
+import { useEffect } from "react"
 
 export function Counter({inizio, incremento}){
     const [count, setCount] = useState(inizio)
@@ -16,6 +17,10 @@ export function Counter({inizio, incremento}){
     function handleReset(){
         setCount(0)
     }
+
+    useEffect(() =>{
+        console.log(count)
+    },[count])
 
     return(
         <div>
