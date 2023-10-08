@@ -10,6 +10,7 @@ export function MouseClicker(props) {
 
     const handleImageClick = (event) => {
         console.log(event.target.src);
+        event.stopPropagation();
     }
 
     return(
