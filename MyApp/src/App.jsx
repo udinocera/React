@@ -9,7 +9,7 @@ function App() {
 
       <Clock />
 
-      <MouseClicker />
+      <MouseClicker name="one"/>
     </>
 
   )
