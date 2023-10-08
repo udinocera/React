@@ -1,6 +1,6 @@
 import { Counter } from "./Counter";
 import { Clock } from "./Clock";
-import { MouseClicker } from "./MouseClicker";
+import { MultiButton } from "./MultiButton";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
 
       <Clock />
 
-      <MouseClicker name="one"/>
+      <MultiButton />
     </>
 
   )
