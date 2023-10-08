@@ -7,11 +7,17 @@ export function MouseClicker(props) {
     const handleClick = (event) => {
         console.log(event.currentTarget.name);
     };
+
+    const handleImageClick = (event) => {
+        console.log(event.target.src);
+    }
+
     return(
         <>
         <button name={props.name} onClick={handleClick}>Click Me
-        <img src={Cuore} alt="icon" />
+        <img src={Cuore} alt="icon" onClick={handleImageClick} />
         </button>
         </>
+        //Si, Ciò accade a causa del bubbling di eventi in React
     )
 }
