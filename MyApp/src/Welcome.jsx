@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import React from "react";
 
-export function Welcome ({name, age}) {
+function Welcome ({name}) {
     return ( 
     <div>
     <p>Welcome, {name}!</p>
-    {age>=18 ? <p>Your age is {age}</p> : <p>You are very young!</p>}
     </div>
     );
 }
+
+export default Welcome
