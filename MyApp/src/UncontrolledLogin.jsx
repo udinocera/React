@@ -6,9 +6,8 @@ export function UncontrolledLogin(){
         event.preventDefault();
 
         /*
-        1)API standard  è FormData
-
-        2) Gli approcci non standard includono l'interfacciamento diretto con gli input del modulo tramite name.
+        1) Vantaggi Semplicità nell'estrarre i valori e la compatibilità con vari browser
+        2) Svantaggi Limitazione valori null
 
         */
 
