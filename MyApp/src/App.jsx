@@ -1,7 +1,8 @@
 import { Counter } from "./Counter";
 import { Clock } from "./Clock";
 import { MultiButton } from "./MultiButton";
-import InteractiveWelcome from "./InteractiveWelcome";
+
+import Login from "./Login";
 
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
 
       <MultiButton />
 
-      <InteractiveWelcome />
+      <Login />
+
+
 
 
       
