@@ -1,7 +1,8 @@
 import { Counter } from "./Counter";
 import { Clock } from "./Clock";
 import { MultiButton } from "./MultiButton";
-import { UncontrolledLogin } from "./UncontrolledLogin";
+
+import { FocusableInput } from "./FocusableInput";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 
       <MultiButton />
 
-      <UncontrolledLogin />
+      <FocusableInput />
 
 
 
