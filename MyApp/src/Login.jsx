@@ -1,21 +1,23 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react"
 
-
-function Login(){
-
-    const [data, setData] = useState({
+const formData = {
         username : '',
         password: '',
         ricorda: false,
-    });
+};
+
+
+function Login({ onLogin }){
+
+    const [data, setData] = useState(formData);
 
     const handleInputChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
         const checked = event.target.checked;
         const type = event.target.type;
-        console.log(event)
 
         setData((data => {
             return {
@@ -25,6 +27,10 @@ function Login(){
         }));
     };
 
+    const handleLoginClick = (event) => {
+        event.preventDefault();
+        onLogin(data);
+    }
 
 
 
@@ -35,6 +41,8 @@ function Login(){
 <hr />
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" value={data.password} onChange={handleInputChange}/>
+<hr />
+           <button type="submit" disabled={!data.username || !data.password} onClick={handleLoginClick}>Login</button>
 <hr />
             <label htmlFor="checkbox">Ricorda</label>
             <input type="checkbox" name="ricorda" id="checkbox" checked={data.ricorda} onChange={handleInputChange}/>
