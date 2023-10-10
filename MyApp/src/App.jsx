@@ -9,7 +9,12 @@ import { Colors } from "./Colors";
 
 
 function App() {
-  const color = ["red", "blue", "yellow"]
+  const color = [
+     { id: 1, name: "rosso"},
+     { id: 2, name: "verde"},
+     { id: 3, name: "blu"},
+  ];
+  
   return (
     <>
       <Counter inizio={0} incremento={1}/>
