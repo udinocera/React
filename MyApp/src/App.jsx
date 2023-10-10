@@ -1,6 +1,7 @@
 import { Counter } from "./Counter";
 import { Clock } from "./Clock";
 import { MultiButton } from "./MultiButton";
+import Welcome from "./Welcome";
 
 import { FocusableInput } from "./FocusableInput";
 
@@ -14,7 +15,7 @@ function App() {
      { id: 2, name: "verde"},
      { id: 3, name: "blu"},
   ];
-  
+
   return (
     <>
       <Counter inizio={0} incremento={1}/>
@@ -28,6 +29,8 @@ function App() {
       <MyList />
 
       <Colors items={color} />
+
+      <Welcome />
 
 
 

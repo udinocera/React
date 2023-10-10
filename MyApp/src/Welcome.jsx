@@ -4,7 +4,7 @@ import React from "react";
 
 function Welcome ({name}) {
     return ( 
-    <div>
+    <div className="welcome">
     <p>Welcome, {name}!</p>
     </div>
     );
