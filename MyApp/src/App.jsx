@@ -3,6 +3,7 @@ import { Clock } from "./Clock";
 import { MultiButton } from "./MultiButton";
 
 import { FocusableInput } from "./FocusableInput";
+import { Mounted } from "./Mounted";
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
       <MultiButton />
 
       <FocusableInput />
+
+      <Mounted />
 
 
 
