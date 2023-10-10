@@ -32,6 +32,9 @@ function Login({ onLogin }){
         onLogin(data);
     }
 
+    const handleResetClick = () => {
+        setData(formData);
+    };
 
 
     return(
@@ -44,6 +47,8 @@ function Login({ onLogin }){
 <hr />
            <button type="submit" disabled={!data.username || !data.password} onClick={handleLoginClick}>Login</button>
 <hr />
+            <button type="reset" onClick={handleResetClick}>Reset</button>
+ <hr />  
             <label htmlFor="checkbox">Ricorda</label>
             <input type="checkbox" name="ricorda" id="checkbox" checked={data.ricorda} onChange={handleInputChange}/>
         </form>
