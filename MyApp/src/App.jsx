@@ -3,10 +3,13 @@ import { Clock } from "./Clock";
 import { MultiButton } from "./MultiButton";
 
 import { FocusableInput } from "./FocusableInput";
-import { Mounted } from "./Mounted";
+
+import { MyList } from "./MyList";
+import { Colors } from "./Colors";
 
 
 function App() {
+  const color = ["red", "blue", "yellow"]
   return (
     <>
       <Counter inizio={0} incremento={1}/>
@@ -17,7 +20,9 @@ function App() {
 
       <FocusableInput />
 
-      <Mounted />
+      <MyList />
+
+      <Colors items={color} />
 
 
 
