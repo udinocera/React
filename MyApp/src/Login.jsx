@@ -3,80 +3,43 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
-const formData = {
-  username: "",
-  password: "",
-  ricorda: false,
-};
-
-function Login({ onLogin }) {
-  const [data, setData] = useState(formData);
+ function Login ({onLogin}) {
+  const [data, setData] = useState({
+    username: "",
+    password: "",
+    remember: false
+  });
 
   const handleInputChange = (event) => {
     const name = event.target.name;
-    const value = event.target.value;
-    const checked = event.target.checked;
-    const type = event.target.type;
+    const value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
 
-    setData((data) => {
+    setData(data => {
       return {
         ...data,
-        [name]: type === "checkbox" ? checked : value,
-      };
+        [name]: value
+      }
     });
-  };
+  }
 
-  const handleResetClick = () => {
-    setData(formData);
-  };
+  const isButtonDisabled = data.username === "" || data.password === "";
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+  const handleLogin = (event) => {
+    event.preventDefault()
     onLogin(data);
   };
 
-  return (
-    <form onSubmit={handleFormSubmit}>
-      <label htmlFor="username">User</label>
-      <input
-        type="text"
-        name="username"
-        id="username"
-        value={data.username}
-        onChange={handleInputChange}
-      />
-      <hr />
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        name="password"
-        id="password"
-        value={data.password}
-        onChange={handleInputChange}
-      />
-      <hr />
+  return(
+    <>
+    <form>
+      <input type="text" name="username" value={data.username} onChange={handleInputChange}/>
+      <input type="password" name="password" value={data.password} onChange={handleInputChange} />
+      <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange}/>
       <button
-        type="submit"
-        disabled={!data.username || !data.password}
-        style={{ backgroundColor: data.password > 8 ? "green" : "red" }}
-      >
-        Login
-      </button>
-      <hr />
-      <button type="reset" onClick={handleResetClick}>
-        Reset
-      </button>
-      <hr />
-      <label htmlFor="checkbox">Ricorda</label>
-      <input
-        type="checkbox"
-        name="ricorda"
-        id="checkbox"
-        checked={data.ricorda}
-        onChange={handleInputChange}
-      />
+       style={{backgroundColor: data.password.length < 8 ? "red" : "green"}} onClick={handleLogin} disabled={isButtonDisabled}>Login</button>
     </form>
-  );
+    </>
+  )
 }
 
-export default Login;
+export default Login
