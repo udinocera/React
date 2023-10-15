@@ -7,6 +7,7 @@ import { FocusableInput } from "./FocusableInput";
 
 import { MyList } from "./MyList";
 import { Colors } from "./Colors";
+import Login from "./Login";
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
       <Colors items={color} />
 
       <Welcome />
+
+      <Login />
 
 
 
