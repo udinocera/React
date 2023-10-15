@@ -6,6 +6,7 @@ import { FocusableInput } from "./FocusableInput";
 
 import { MyList } from "./MyList";
 import { Colors } from "./Colors";
+import TodoList from "./TodoList";
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
       <MyList />
 
       <Colors items={color} />
+
+      <TodoList items={[]}/>
 
 
 
