@@ -14,6 +14,7 @@ const TodoList = ({items}) => {
             ...toDoList,
             toDoInput
         ]);
+        setToDoInput("")
     }
 
     const handleKeyPress = (event) => {
