@@ -58,6 +58,7 @@ function Login({ onLogin }) {
       <button
         type="submit"
         disabled={!data.username || !data.password}
+        style={{ backgroundColor: data.password > 8 ? "green" : "red" }}
       >
         Login
       </button>
