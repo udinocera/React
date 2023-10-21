@@ -17,10 +17,12 @@ function App() {
         <option value="it">IT</option>
         <option value="en">EN</option>
       </select>
-      <LanguageContext.Provider value={language}>
+      
         <Clock />
-      </LanguageContext.Provider>
+    
     </div>
+
+    // Senza il context Provider non è possibile ottenere le modifiche in base alla lingua scelta.
     
     
 
