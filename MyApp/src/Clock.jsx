@@ -18,5 +18,11 @@ useEffect(() => {
     };
 }, []);
 
-return <h2>{time}</h2>
+return (
+<>
+ <h1>Sono le:</h1>
+ <h2>{time}</h2>
+</>
+)
+ 
 }
