@@ -8,17 +8,10 @@ function App() {
   return (
     
     
-    <Container>
-    <Hello />
+    <Container title={<Hello />}>
     <Message />
 
    </Container>
-
-
-
-
-      
-    
 
   )
 }
