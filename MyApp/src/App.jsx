@@ -1,4 +1,5 @@
-import { GithubUser } from "./GithubUser";
+import { CurrentLocation } from "./CurrentLocation";
+
 
 
 
@@ -12,7 +13,7 @@ function App() {
   
   return (
     <>
-    <GithubUser username="udinocera" />
+<CurrentLocation />
     </>
   )
 }
