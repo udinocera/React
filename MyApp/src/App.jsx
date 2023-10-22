@@ -1,5 +1,6 @@
+import { Counter } from "./Counter";
 
-import { GithubUsers } from "./GithubUsers";
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
   
   return (
     <>
-     <GithubUsers />
+    <Counter />
     </>
   )
 }
