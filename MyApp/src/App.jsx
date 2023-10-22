@@ -1,5 +1,6 @@
+import { GithubUser } from "./GithubUser";
 
-import { Login } from "./Login";
+
 
 
 
@@ -11,7 +12,7 @@ function App() {
   
   return (
     <>
-    <Login />
+    <GithubUser username="udinocera" />
     </>
   )
 }
