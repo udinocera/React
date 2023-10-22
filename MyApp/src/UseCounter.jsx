@@ -1,20 +1,21 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 
 
 export function UseCounter({initialValue = 0}) {
     const [count, setCount] = useState(initialValue)
     
-    function handleAggiungiUno (){
-        setCount(count + 1)
-    }
+    const handleAggiungiUno = useCallback(() => {
+        setCount((c) => c + 1);
+    }, []);
 
-    function handleRimuoviUno(){
-        setCount(count - 1)
-    }
+    const handleRimuoviUno = useCallback(() => {
+        setCount((c) => c - 1);
+    }, []);
 
-    function handleReset(){
+    const handleReset = useCallback(() => {
         setCount(initialValue)
-    }
+    }, [initialValue]);
+   
     return {count, handleAggiungiUno, handleRimuoviUno, handleReset}
 }
 
