@@ -4,7 +4,7 @@ function App() {
   
   return (
     <>
-      <Welcome name="John" age={2}/>
+      <Welcome name="John" age={21}/>
     </>
 
   );
