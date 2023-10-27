@@ -1,12 +1,5 @@
-import { Counter } from "./Counter";
+
 import FilteredList from "./FilteredList";
-
-
-
-
-
-
-
 
 
 
