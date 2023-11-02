@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Welcome ({ name }) {
+export const Welcome =  ({ name }) => {
     return ( 
     <div className="welcome">
     <p>Welcome, {name}!</p>
+    <Link to="/counter">Counter</Link> | <Link to="users/udinocera">Profilo GitHub</Link>
     </div>
     );
 }
-
-export default Welcome
