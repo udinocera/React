@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { useCounter } from "../hooks/useCounter";
 
 export const Counter = () => {
@@ -12,7 +12,6 @@ export const Counter = () => {
         <button onClick={decrement}>Diminuisci</button>
         <button onClick={reset}>Resetta</button>
       </div>
-      <Link to="/">Home</Link>
     </>
   );
 };
