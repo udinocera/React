@@ -1,38 +1,38 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
 export const GithubUser = ({ username }) => {
-    const API_URL = `https://api.github.com/users/${username}`
     
     const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(API_URL);
-                const result = await response.json();
-                setData(result);
+   async function fetchData(username) {
+    try {
+      setLoading(true);
+      const response = await fetchData (`https://api.github.com/users/${username}`);
+      const data = await response.json();
+      setData(data);
 
-            } catch (error) {
-                console.error(error.message)
-                
-            }
-        }
-        fetchData();
-    },[]) 
+    } catch (error) {
+      setError(error);
+    }finally{
+      setLoading(false);
+    }
+   }
+
+   useEffect(() => {
+    fetchData(username);
+   },[username]);
 
     return(
         <>
-        {
-            data && (
-                <div>
-                   <img style={{borderRadius:"5%"}} src={data.avatar_url} />
-                   <h1>{data.login}</h1>
-                   <h2>{data.name}</h2>
-                </div>
-            )
-        }
+        {loading && <h1>Loading...</h1>}
+        <h1>{data?.login}</h1>
+        <img src={data?.avatar_url} style={{borderRadius: "5%"}} />
+        <h2>{data?.name}</h2>
         </>
     )
 }

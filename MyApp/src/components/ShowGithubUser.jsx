@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-
 import { GithubUser } from "./GithubUser";
 
 export const ShowGithubUser = () => {
